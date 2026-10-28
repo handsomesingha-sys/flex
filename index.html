@@ -1394,12 +1394,12 @@
 
       try {
         const parsed = parseFlexForm();
-        const templateId = document.getElementById("flexTemplateSelect")?.value || "";
-        const payload = {
-          userIds: Array.from(selectedUserIds),
-          altText: parsed.altText,
-          contents: parsed.contents
-        };
+
+const payload = {
+  userIds: Array.from(selectedUserIds),
+  altText: parsed.altText,
+  contents: parsed.contents
+};
         if (templateId) payload.templateId = templateId;
 
         const confirmed = confirm(`ยืนยันส่ง Flex Message ให้ ${selectedUserIds.size} คนหรือไม่?`);
